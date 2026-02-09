@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analizador de URLs - Proyecto Ciberseguridad</title>
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-search"></i> Analizador de URLs Sospechosas</h1>
+            <a href="index.html" class="back-btn">
+                <i class="fas fa-arrow-left"></i> Volver al inicio
+            </a>
+        </header>
+
+        <div class="analyzer-container">
+            <div class="input-section">
+                <h2><i class="fas fa-link"></i> Analizar Enlace</h2>
+                <p>Introduce una URL para analizar si contiene patrones potencialmente peligrosos:</p>
+                
+                <div class="url-input">
+                    <input type="text" id="url-input" 
+                           placeholder="https://ejemplo.com o poweroff://"
+                           value="poweroff://apagar">
+                    <button id="analyze-btn" class="btn">
+                        <i class="fas fa-search"></i> Analizar URL
+                    </button>
+                </div>
+
+                <div class="quick-tests">
+                    <p>Pruebas rápidas:</p>
+                    <button class="test-btn" data-url="poweroff://">poweroff://</button>
+                    <button class="test-btn" data-url="shutdown://">shutdown://</button>
+                    <button class="test-btn" data-url="tel://*#06#">tel://*#06#</button>
+                    <button class="test-btn" data-url="facetime://">facetime://</button>
+                    <button class="test-btn" data-url="https://banco-falso.com/login">Phishing Simulado</button>
+                </div>
+            </div>
+
+            <div id="results" class="results-section">
+                <!-- Los resultados aparecerán aquí -->
+            </div>
+
+            <div class="patterns-info">
+                <h3><i class="fas fa-list"></i> Patrones detectados</h3>
+                <div class="patterns-grid">
+                    <div class="pattern high-risk">
+                        <h4><i class="fas fa-skull-crossbones"></i> Alto Riesgo</h4>
+                        <ul>
+                            <li>Protocolos personalizados (poweroff://)</li>
+                            <li>Códigos USSD (tel://*#06#)</li>
+                            <li>JavaScript malicioso (javascript:alert())</li>
+                        </ul>
+                    </div>
+                    <div class="pattern medium-risk">
+                        <h4><i class="fas fa-exclamation-triangle"></i> Riesgo Medio</h4>
+                        <ul>
+                            <li>Protocolos de apps (facetime://)</li>
+                            <li>URLs acortadas (bit.ly, tinyurl)</li>
+                            <li>Dominios similares a legítimos</li>
+                        </ul>
+                    </div>
+                    <div class="pattern safe">
+                        <h4><i class="fas fa-check-circle"></i> Seguro</h4>
+                        <ul>
+                            <li>HTTPS con certificado válido</li>
+                            <li>Dominios conocidos y legítimos</li>
+                            <li>Sin scripts sospechosos</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/url-analyzer.js"></script>
+</body>
+</html>
