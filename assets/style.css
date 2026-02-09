@@ -1,0 +1,337 @@
+/* Estilos principales del proyecto */
+:root {
+    --primary: #2563eb;
+    --danger: #dc2626;
+    --warning: #f59e0b;
+    --success: #10b981;
+    --dark: #1f2937;
+    --light: #f3f4f6;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--dark);
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+header h1 {
+    color: var(--dark);
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    color: #6b7280;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.warning {
+    background: #fef3c7;
+    border-left: 4px solid var(--warning);
+    padding: 1rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Cards */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.card {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+.card-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.card-icon.red { background: var(--danger); }
+.card-icon.blue { background: var(--primary); }
+.card-icon.green { background: var(--success); }
+
+/* Buttons */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--primary);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.3s;
+    margin-top: 1rem;
+}
+
+.btn:hover {
+    background: #1d4ed8;
+}
+
+.btn-large {
+    padding: 15px 30px;
+    font-size: 1.1rem;
+}
+
+.btn-secondary {
+    background: #6b7280;
+}
+
+.btn-secondary:hover {
+    background: #4b5563;
+}
+
+/* Simulation styles */
+.simulation-warning {
+    background: #fee2e2;
+    border: 2px solid var(--danger);
+    padding: 1rem;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 1rem 0;
+}
+
+.device-mockup {
+    background: #000;
+    border-radius: 30px;
+    padding: 20px;
+    max-width: 300px;
+    margin: 2rem auto;
+    position: relative;
+}
+
+.device-screen {
+    background: white;
+    border-radius: 20px;
+    padding: 20px;
+    min-height: 500px;
+    font-family: 'Courier New', monospace;
+}
+
+.device-frame {
+    position: absolute;
+    top: 50%;
+    right: -10px;
+    transform: translateY(-50%);
+}
+
+.device-button {
+    width: 3px;
+    height: 40px;
+    background: #333;
+    border-radius: 2px;
+}
+
+/* Output lines for exploit simulation */
+.output-line {
+    padding: 5px 0;
+    border-bottom: 1px solid #e5e7eb;
+    font-family: 'Courier New', monospace;
+}
+
+/* Code preview */
+.code-preview {
+    background: #1e293b;
+    color: #e2e8f0;
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin: 2rem 0;
+    overflow-x: auto;
+}
+
+.code-preview pre {
+    margin: 0;
+}
+
+.code-preview code {
+    font-family: 'Courier New', monospace;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* URL Analyzer */
+.url-input {
+    display: flex;
+    gap: 10px;
+    margin: 1rem 0;
+}
+
+.url-input input {
+    flex: 1;
+    padding: 12px;
+    border: 2px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.quick-tests {
+    margin: 1.5rem 0;
+}
+
+.test-btn {
+    background: #e5e7eb;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    margin: 0 5px 5px 0;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.test-btn:hover {
+    background: #d1d5db;
+}
+
+/* Results section */
+.results-section {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    margin: 2rem 0;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.result-card {
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin: 1rem 0;
+}
+
+.result-card.high {
+    background: #fee2e2;
+    border-left: 4px solid var(--danger);
+}
+
+.result-card.medium {
+    background: #fef3c7;
+    border-left: 4px solid var(--warning);
+}
+
+.result-card.low {
+    background: #d1fae5;
+    border-left: 4px solid var(--success);
+}
+
+/* Patterns grid */
+.patterns-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.pattern {
+    padding: 1.5rem;
+    border-radius: 10px;
+    color: white;
+}
+
+.pattern.high-risk { background: var(--danger); }
+.pattern.medium-risk { background: var(--warning); }
+.pattern.safe { background: var(--success); }
+
+/* Table styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+}
+
+table th, table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+table th {
+    background: #f9fafb;
+    font-weight: 600;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 3rem;
+    padding: 2rem;
+    color: white;
+}
+
+.github-link {
+    margin-top: 1rem;
+}
+
+.github-link a {
+    color: white;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .cards {
+        grid-template-columns: 1fr;
+    }
+    
+    .url-input {
+        flex-direction: column;
+    }
+    
+    header h1 {
+        font-size: 2rem;
+    }
+}
