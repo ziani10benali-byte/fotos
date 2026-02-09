@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto Ciberseguridad - Vectores de Ataque Web</title>
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-shield-alt"></i> Proyecto de Ciberseguridad</h1>
+            <p class="subtitle">Análisis de Vectores de Ataque Web en Dispositivos Móviles</p>
+            <div class="warning">
+                <i class="fas fa-exclamation-triangle"></i>
+                <strong>ADVERTENCIA:</strong> Este es un proyecto educativo. Todo el código es una simulación.
+            </div>
+        </header>
+
+        <div class="team-info">
+            <h2><i class="fas fa-users"></i> Grupo: "Te Ataque"</h2>
+            <p><strong>Asignatura:</strong> Ciberseguridad</p>
+            <p><strong>Objetivo:</strong> Analizar y simular vectores de ataque web históricos</p>
+        </div>
+
+        <div class="cards">
+            <div class="card">
+                <div class="card-icon red">
+                    <i class="fas fa-bug"></i>
+                </div>
+                <h3>Simulación de Exploit</h3>
+                <p>Demostración interactiva de cómo funcionaban vulnerabilidades ya parcheadas</p>
+                <a href="exploit-simulado.html" class="btn">
+                    <i class="fas fa-play"></i> Ejecutar Simulación
+                </a>
+            </div>
+
+            <div class="card">
+                <div class="card-icon blue">
+                    <i class="fas fa-search"></i>
+                </div>
+                <h3>Analizador de URLs</h3>
+                <p>Herramienta para detectar enlaces potencialmente peligrosos</p>
+                <a href="analizador.html" class="btn">
+                    <i class="fas fa-search"></i> Analizar Enlaces
+                </a>
+            </div>
+
+            <div class="card">
+                <div class="card-icon green">
+                    <i class="fas fa-file-alt"></i>
+                </div>
+                <h3>Informe Técnico</h3>
+                <p>Documentación completa del proyecto y hallazgos</p>
+                <a href="#informe" class="btn">
+                    <i class="fas fa-book"></i> Ver Informe
+                </a>
+            </div>
+        </div>
+
+        <section id="explicacion">
+            <h2><i class="fas fa-lightbulb"></i> Explicación Técnica</h2>
+            
+            <div class="tech-box">
+                <h3>¿Por qué no se puede apagar un dispositivo desde una web?</h3>
+                <ul>
+                    <li><strong>Sandboxing:</strong> Los navegadores ejecutan código en un entorno aislado</li>
+                    <li><strong>Política de mismo origen:</strong> Restringe acceso entre sitios</li>
+                    <li><strong>Permisos de sistema:</strong> JavaScript no tiene acceso a comandos de apagado</li>
+                    <li><strong>Protecciones del SO:</strong> iOS/Android bloquean acciones peligrosas</li>
+                </ul>
+            </div>
+
+            <div class="tech-box">
+                <h3>Vulnerabilidades históricas analizadas</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>CVE</th>
+                            <th>Plataforma</th>
+                            <th>Año</th>
+                            <th>Efecto</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>CVE-2011-1345</td>
+                            <td>iOS 4.0-4.2.1</td>
+                            <td>2011</td>
+                            <td>Desbordamiento de búfer en WebKit</td>
+                        </tr>
+                        <tr>
+                            <td>CVE-2015-0099</td>
+                            <td>Windows</td>
+                            <td>2015</td>
+                            <td>Ejecución remota mediante Internet Explorer</td>
+                        </tr>
+                        <tr>
+                            <td>CVE-2016-4657</td>
+                            <td>iOS 9.3.4</td>
+                            <td>2016</td>
+                            <td>Vulnerabilidad en WebKit (Jailbreak)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="informe">
+            <h2><i class="fas fa-file-alt"></i> Informe Técnico</h2>
+            
+            <div class="report">
+                <h3>Metodología</h3>
+                <p>Este proyecto simula vectores de ataque que fueron reales en el pasado pero que han sido parcheados. Se utiliza HTML, CSS y JavaScript para crear demostraciones educativas que muestran:</p>
+                <ol>
+                    <li>Cómo los atacantes explotaban vulnerabilidades</li>
+                    <li>Qué protecciones existen hoy en día</li>
+                    <li>Por qué es importante mantener los dispositivos actualizados</li>
+                </ol>
+
+                <h3>Hallazgos principales</h3>
+                <ul>
+                    <li>Los navegadores modernos tienen múltiples capas de seguridad</li>
+                    <li>El sandboxing previene el 99% de los ataques web</li>
+                    <li>Las actualizaciones de seguridad son críticas</li>
+                    <li>La educación del usuario es la mejor defensa</li>
+                </ul>
+
+                <h3>Código ético</h3>
+                <p>Todo el código en este proyecto:</p>
+                <ul>
+                    <li>Es 100% educativo y de demostración</li>
+                    <li>No ejecuta comandos reales del sistema</li>
+                    <li>No causa daño a dispositivos</li>
+                    <li>Se ejecuta solo en el navegador</li>
+                    <li>Cumple con las leyes de ciberseguridad</li>
+                </ul>
+            </div>
+        </section>
+
+        <footer>
+            <p><i class="fas fa-graduation-cap"></i> Proyecto educativo para la clase de Ciberseguridad</p>
+            <p class="small">Todos los derechos reservados © 2024 - Grupo "Te Ataque"</p>
+            <div class="github-link">
+                <i class="fab fa-github"></i>
+                <a href="https://github.com/tuusuario/cybersecurity-project" target="_blank">Ver código en GitHub</a>
+            </div>
+        </footer>
+    </div>
+
+    <script src="assets/script.js"></script>
+</body>
+</html>
